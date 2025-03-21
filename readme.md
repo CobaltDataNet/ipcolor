@@ -1,12 +1,3 @@
-### Create and Add the README
-
-#### 1. **Write the README**
-On `riv5-nyc-mini5` in `~/ipcolor-repo`:
-```bash
-nano README.md
-```
-Paste this content:
-```markdown
 # ipcolor - Colorized `ip` Command Output
 
 A Bash script to add ANSI colors to the output of the `ip` command (e.g., `ip link`, `ip addr`) for better readability in terminals like PuTTY.

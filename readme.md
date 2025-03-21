@@ -80,4 +80,4 @@ Edit `/usr/local/bin/ipcolor` to change colors:
 Fork this repo, make changes, and submit a pull request at `https://github.com/CobaltDataNet/ipcolor`.
 
 ## License
-Public domain - use freely!
+This project is licensed under the MIT License. See the LICENSE file for details.

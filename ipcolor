@@ -1,0 +1,16 @@
+#!/bin/bash
+# Colorize ip command output
+
+/sbin/ip "$@" | while IFS= read -r line; do
+    if [[ $line =~ ^[0-9]+: ]]; then
+        echo -e "\e[32m$line\e[0m"
+    elif [[ $line =~ state\ UP ]]; then
+        echo -e "${line/state UP/\e[33mstate UP\e[0m}"
+    elif [[ $line =~ state\ DOWN ]]; then
+        echo -e "${line/state DOWN/\e[31mstate DOWN\e[0m}"
+    elif [[ $line =~ link/ether ]]; then
+        echo -e "${line/link\/ether/\e[36mlink/ether\e[0m}"
+    else
+        echo "$line"
+    fi
+done
